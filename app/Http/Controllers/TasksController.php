@@ -15,7 +15,12 @@ class TasksController extends Controller {
 	public function index()
 	{
 		//
-        echo "tasks";
+//        echo "tasks";
+
+        $task = Task::find(1);
+//        return response()->json(['name' => 'Abigail', 'state' => 'CA']);
+        return response()->json($task->toArray());
+
 	}
 
 	/**

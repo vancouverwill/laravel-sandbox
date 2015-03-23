@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller {
 
+    public function __construct()
+    {
+
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -46,6 +51,22 @@ class TestController extends Controller {
 	 * @return Response
 	 */
 	public function show($id)
+	{
+
+		//
+//        echo "Test show";
+        $data = array();
+        return view('test.show', $data);
+	}
+
+
+    /**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function showAuthenticated()
 	{
 		//
 //        echo "Test show";

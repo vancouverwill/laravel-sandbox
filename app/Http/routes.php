@@ -24,6 +24,8 @@ Route::controllers([
 ]);
 
 Route::resource('tasks', 'TasksController');
+
+Route::get('test/showAuthenticated', ['middleware' => 'auth', 'uses' => 'TestController@showAuthenticated']);
 Route::resource('test', 'TestController');
 
 
