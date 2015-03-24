@@ -24,6 +24,8 @@ Route::controllers([
 ]);
 
 Route::resource('tasks', 'TasksController');
+Route::resource('tasksdisplay', 'TasksDisplayController');
+Route::resource('tasksdisplay/{id}', 'TasksDisplayController@show');
 
 Route::get('test/showAuthenticated', ['middleware' => 'auth', 'uses' => 'TestController@showAuthenticated']);
 Route::resource('test', 'TestController');

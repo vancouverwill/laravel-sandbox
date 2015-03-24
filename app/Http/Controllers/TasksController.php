@@ -17,9 +17,16 @@ class TasksController extends Controller {
 		//
 //        echo "tasks";
 
-        $task = Task::find(1);
+//        $task = \App\Task::find(1);
+        $tasks = \App\Task::all();
+
+
 //        return response()->json(['name' => 'Abigail', 'state' => 'CA']);
-        return response()->json($task->toArray());
+//        return response()->json($task->toArray());
+
+        return $tasks;
+
+        return view('test.show', $data);
 
 	}
 
@@ -31,6 +38,8 @@ class TasksController extends Controller {
 	public function create()
 	{
 		//
+        $task = null;
+        return null;
 	}
 
 	/**
@@ -52,6 +61,8 @@ class TasksController extends Controller {
 	public function show($id)
 	{
 		//
+        $task = \App\Task::find(1);
+        return $task;
 	}
 
 	/**
